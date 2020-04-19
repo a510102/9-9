@@ -1,0 +1,151 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.app {
+  max-width: 1280px;
+  height: 1372px;
+  padding: 80px 85px 0px;
+  margin: 0 auto;
+  background-color: #F0F0F0;
+  color: #2EB738;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.title {
+  width: 290px;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #2EB738;
+  border-bottom: 1px solid #2EB738;
+  position: relative;
+}
+@media screen and (max-width: 1280px) and (min-width: 800px) {
+  .title {
+    max-width: 50%;
+  }
+}
+.title .x-coin {
+  position: absolute;
+}
+.title .rt {
+  top: -13px;
+  right: -30px;
+}
+.title .rb {
+  bottom: -13px;
+  right: -30px;
+}
+.title .lt {
+  top: -13px;
+  left: -30px;
+}
+.title .lb {
+  bottom: -13px;
+  left: -30px;
+}
+.title .title-title {
+  font-size: 56px;
+  font-weight: bold;
+}
+.title .title-content {
+  font-size: 24px;
+}
+
+.box {
+  width: 350px;
+  height: 366px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 3px 10px #D8D8D8;
+  border-radius: 100px 0px 30px 0px;
+  opacity: 1;
+}
+@media screen and (max-width: 1200px) and (min-width: 800px) {
+  .box {
+    max-width: 50%;
+  }
+}
+
+.box-left .box-content {
+  margin-bottom: 12.5px;
+}
+.box-left .box-title {
+  font-size: 128px;
+  font-weight: bold;
+  margin-bottom: 12.5px;
+}
+
+.box-right .box-content {
+  margin-top: 16.8571428571px;
+  margin-bottom: 16.8571428571px;
+}
+
+footer {
+  margin: 0 auto;
+  max-width: 1450px;
+  width: 100%;
+  background-color: #2EB738;
+  color: #F0F0F0;
+  height: 34px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+footer p {
+  margin-right: 5px;
+}

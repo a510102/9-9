@@ -1,0 +1,151 @@
+@import 'reset';
+
+// var
+$color-green: #2EB738;
+$color-gray: #F0F0F0;
+$title-size: 128px;
+$content-size: 24px;
+$broder-green: 1px solid #2EB738;
+$post-updo: -13px;
+$post-leri: -30px;
+
+
+// mixin
+@mixin mQ($arg...){
+  @if length($arg) == 1{
+    @media screen and (max-width: nth($arg, 1)){
+      @content;
+    }
+  }
+  @if length($arg) == 2{
+    @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2)){
+      @content;
+    }
+  }
+}
+
+@mixin magCenter {
+  margin: 0 auto;
+}
+
+@mixin layout {
+  max-width: 1280px;
+  height: 1372px;
+  padding: 80px 85px 0px;
+  @include magCenter;
+}
+
+@mixin box {
+  width: 350px;
+  height: 366px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 3px 10px #D8D8D8;
+  border-radius: 100px 0px 30px 0px;
+  opacity: 1;
+  @include mQ(1200px,800px) {
+   max-width: 50%; 
+  }
+}
+
+@mixin title {
+  width: 290px;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-top: $broder-green;
+  border-bottom: $broder-green;
+  position: relative;
+  @include mQ(1280px,800px) {
+    max-width: 50%; 
+   }
+}
+
+@mixin footer {
+  @include magCenter();
+  max-width: 1450px;
+  width: 100%;
+  background-color: $color-green;
+  color: $color-gray;
+  height: 34px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+// layout
+
+.app {
+  @include layout;
+  background-color: $color-gray;
+  color: $color-green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+.title {
+  @include title;
+  .x-coin{
+    position: absolute;
+  }
+  .rt {
+    top: $post-updo;
+    right: $post-leri;
+  }
+  .rb {
+    bottom: $post-updo;
+    right: $post-leri;
+  }
+  .lt{
+    top: $post-updo;
+    left: $post-leri;
+  }
+  .lb{
+    bottom: $post-updo;
+    left: $post-leri;
+  }
+  .title-title {
+    font-size: 56px;
+    font-weight: bold;
+  }
+  .title-content{
+    font-size: $content-size;
+  }
+}
+
+.box {
+  @include box;
+  
+}
+
+.box-left{
+  .box-content{
+      margin-bottom: (50px/4);
+    }
+    .box-title{
+      font-size: $title-size;
+      font-weight: bold;
+      margin-bottom: (50px/4);
+    }
+}
+
+.box-right{
+  .box-content{
+    margin-top: (118px/7);
+    margin-bottom: (118px/7);
+  }
+}
+
+footer{
+  @include footer();
+  p{
+    margin-right: 5px;
+  }
+}
